@@ -56,6 +56,7 @@ for i in range(len(num_list)):
 
 print(num_list)
 
+
     # elif el_in_list.find("5") != -1:
 # ind = el_in_list.find('5')
 # num_list[i] = f"{int(el_in_list[ind]):02d}"

@@ -4,3 +4,4 @@ for el in main_list:
     name = el.split()[-1]
     ed_name = name.lower().title()
     print(f'Привет, {ed_name}!')
+
