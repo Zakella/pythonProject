@@ -10,3 +10,4 @@ new_price_list = price_list.copy()
 new_price_list.sort(reverse=True)
 print(new_price_list)
 print(new_price_list[:5])
+
