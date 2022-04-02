@@ -13,10 +13,6 @@ def checkInt(s):
         return False
 
 
-def double_quote(word):
-    return '"%s"' % word
-
-
 num_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
 
 for i in range(len(num_list)):
@@ -29,7 +25,8 @@ for i in range(len(num_list)):
             num_list[i] = f"+{int(num_list[i][-1]):02d}"
         elif num_list[i].find("5") != -1:
             num_list[i] = f"{int(num_list[i][-1]):02d}"
-        num_list[i] = double_quote(num_list[i])
+        num_list[i] = '"%s"' % num_list[i]
 
 new_msg = ' '.join(num_list)
 print(new_msg)
+
