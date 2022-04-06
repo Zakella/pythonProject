@@ -1,8 +1,3 @@
-# def checkInt(str):
-#     if str[0] in ('-', '+'):
-#         return str[1:].isdigit()
-#     return str.isdigit()
-
 def checkInt(s):
     isInt = True
     try:
@@ -11,75 +6,27 @@ def checkInt(s):
     except ValueError:
         isInt = False
     if isInt:
-        print('Input value is an integer')
+        # print('Input value is an integer')
+        return True
     else:
-        print('Not an integer')
+        # print('Not an integer')
+        return False
 
 
-# def check_if_str_in_numbers(check_str):
-#     s = '05'
-#     isInt = True
-#     try:
-#         # converting to integer
-#         int(s)
-#     except ValueError:
-#         isInt = False
-#     if isInt:
-#         print('Input value is an integer')
-#     else:
-#         print('Not an integer'
-#
-# check_if_str_in_numbers("05"):
-
-#
-#
 num_list = ['в', '5', 'часов', '17', 'минут', 'температура', 'воздуха', 'была', '+5', 'градусов']
-only_numb = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-
-
-
 
 for i in range(len(num_list)):
-    num_list[i] = f'"{num_list[i]}"'
-    el_in_list = num_list[i]
-    if not el_in_list.find("5") == -1:
-        el_int = el_in_list[-2]
-        ind = el_in_list.find('5')
-        if not el_in_list.find("+") == -1:
-            num_list[i] = f"+{int(el_int):02d}"
-        else:
-            num_list[i] = f"{int(el_int):02d}"
-    num_list[i] = f'"{num_list[i]}"'
-    print(num_list[i])
-    print(type(num_list[i]))
-    print(checkInt( num_list[i]))
+    its_int = False
+    for k in num_list[i]:
+        if checkInt(k):
+            its_int = True
+    if its_int:
+        if num_list[i].find("+") != -1:
+            num_list[i] = f"+{int(num_list[i][-1]):02d}"
+        elif num_list[i].find("5") != -1:
+            num_list[i] = f"{int(num_list[i][-1]):02d}"
+        num_list[i] = '"%s"' % num_list[i]
 
-print(num_list)
-
-
-    # elif el_in_list.find("5") != -1:
-# ind = el_in_list.find('5')
-# num_list[i] = f"{int(el_in_list[ind]):02d}"
-# num_list[i] = f'"{num_list[i]}"'
-# if not check_if_str_in_numbers(num_list[i]):
-#     num_list[i] = num_list[i] .replace("""""", '')
-
-# print(num_list)
-# print(el_in_list)
-# print(num_list)
-# new_msg = ''.join(num_list)
-# print(new_msg)
-# # print(el_in_list)
-# if checkInt(el_in_list):
-#     if not el_in_list.find("5") == -1:
-#         el_int = el_in_list[-1]
-#         if not el_in_list.find("+") == -1:
-#            num_list[i] = f" +{int(el_int):02d}"
-#         else:
-#             num_list[i] = f" {int(el_int):02d}"
-
-
-# new_msg = ','.join(num_list)
-
-# print(new_msg)
+new_msg = ' '.join(num_list)
+print(new_msg)
 
