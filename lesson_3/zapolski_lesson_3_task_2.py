@@ -1,3 +1,4 @@
+
 def thesaurus_adv(*args, sort=True):
     arg_list = list(args)
     dict_filt = {}
