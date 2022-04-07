@@ -1,3 +1,4 @@
+
 def thesaurus_adv(*args, sort=True):
     arg_list = list(args)
     dict_filt = {}
@@ -40,3 +41,4 @@ def thesaurus(*args):
 
 print(thesaurus("Иван", "Мария", "Петр", "Илья"))
 thesaurus_adv("Иван Сергеев", "Инна Серова", "Петр Алексеев", "Илья Иванов", "Анна Савельева")
+
