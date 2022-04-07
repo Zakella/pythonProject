@@ -26,3 +26,4 @@ def num_translate_adv(val):
 
 
 num_translate_adv(input('Введите число: '))
+
