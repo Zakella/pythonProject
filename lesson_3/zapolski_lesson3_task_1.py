@@ -1,4 +1,3 @@
-# вариант 1
 def num_translate_adv(val):
     dict = {
         "zero": "ноль",
@@ -26,3 +25,4 @@ def num_translate_adv(val):
 
 
 num_translate_adv(input('Введите число: '))
+
