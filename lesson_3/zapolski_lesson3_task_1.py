@@ -1,4 +1,3 @@
-# вариант 1
 def num_translate_adv(val):
     dict = {
         "zero": "ноль",
